@@ -49,7 +49,7 @@
   "http://api.soundcloud.com/"
   "URL for API calls.")
 
-(defun get-and-parse-json (url)
+(defun emms-soundcloud-get-and-parse-json (url)
   "Parse JSON from given URL and return it as alist."
   (with-current-buffer (url-retrieve-synchronously url)
     (goto-char (point-min))
@@ -66,7 +66,7 @@
   (let ((request-url (concat emms-soundcloud-api-base-url "resolve.json?"
                              "url=" (url-hexify-string url)
                              "&client_id=" client-id)))
-    (get-and-parse-json request-url)))
+    (emms-soundcloud-get-and-parse-json request-url)))
 
 (defun emms-soundcloud-convert-track (track)
   "Read Soundcloud TRACK info into an emms-track."
