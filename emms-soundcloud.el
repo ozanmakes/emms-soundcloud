@@ -6,6 +6,7 @@
 ;; Keywords: emms, soundcloud
 ;; URL: http://github.com/osener/emms-soundcloud
 ;; Version: 0.1
+;; Package-Requires: ((emms "20131016") (json "1.2"))
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -104,5 +105,7 @@
       (insert " " (propertize title 'face 'emms-browser-album-face)
               "\n"))
     (mapc #'emms-playlist-insert-track emms-tracks)))
+
+(provide 'emms-soundcloud)
 
 ;;; emms-soundcloud.el ends here
