@@ -74,7 +74,7 @@
                              "?client_id=" client-id))
          (emms-track (emms-track 'url stream-url))
          (title (concat (if emms-soundcloud-display-header "  " "")
-                        (concat "  " (cdr (assoc 'title track)))))
+                        (cdr (assoc 'title track))))
          (duration (/ (cdr (assoc 'duration track)) 1000)))
     (emms-track-set emms-track 'info-title title)
     (emms-track-set emms-track 'info-playing-time duration)
