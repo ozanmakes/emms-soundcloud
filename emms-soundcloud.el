@@ -91,7 +91,8 @@
       (url-copy-file url path))
     (emms-browser-insert-cover path)))
 
-;;;###autoload
+;;;###autoload (autoload 'emms-play-soundcloud-set "emms-soundcloud" nil t)
+;;;###autoload (autoload 'emms-add-soundcloud-set "emms-soundcloud" nil t)
 (define-emms-source soundcloud-set (url)
   "An EMMS source for Soundcloud sets (aka playlists)."
   (interactive (list (read-string "Soundcloud set URL: ")))
