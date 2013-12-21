@@ -23,7 +23,8 @@
 
 ;;; Commentary:
 
-;; After you've configured EMMS, load this file and give a Soundcloud set URL
+;; After you've configured EMMS, load this file using
+;; `(require 'emms-soundcloud)` and give a Soundcloud set URL
 ;; to the relevant EMMS source commands.
 
 ;; Example usage:
@@ -91,7 +92,6 @@
       (url-copy-file url path))
     (emms-browser-insert-cover path)))
 
-;;;###autoload
 (define-emms-source soundcloud-set (url)
   "An EMMS source for Soundcloud sets (aka playlists)."
   (interactive (list (read-string "Soundcloud set URL: ")))

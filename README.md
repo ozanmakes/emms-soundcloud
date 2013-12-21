@@ -4,8 +4,8 @@ emms-soundcloud
 EMMS source for Soundcloud audio sharing platform
 
 ## Usage
-After you've configured EMMS, load this file and give a Soundcloud set URL to
-the relevant EMMS source commands.
+After you've configured EMMS, load this file using `(require 'emms-soundcloud)`
+and give a Soundcloud set URL to the relevant EMMS source commands.
 
 Example usage:
 
