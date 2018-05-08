@@ -81,7 +81,7 @@
 
 (defun emms-soundcloud-insert-artwork (url)
   "Download the given artwork URL and insert it into the active playlist."
-  (let* ((filename (substring (elt (url-generic-parse-url url) 6) 1))
+  (let* ((filename (substring (url-filename (url-generic-parse-url url)) 1))
          (directory (concat temporary-file-directory
                             (file-name-as-directory "soundcloud-artwork")))
          (path (concat directory filename)))
